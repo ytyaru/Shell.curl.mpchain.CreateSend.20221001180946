@@ -1,0 +1,18 @@
+${SUMMARY}	${VERSION}
+${THIS_NAME} [-s 支払者アドレス] [-d 受取者アドレス] [-q 支払額] [-f 手数料]
+Parameters:
+  -s 支払者アドレス MEHCqJbgiNERCH3bRAtNSSD9uxPViEX1nu
+  -d 受取者アドレス MEHCqJbgiNERCH3bRAtNSSD9uxPViEX1nu
+  -q 支払額         11411400（0.11411400 MONA）
+  -f 手数料         10
+詳細
+  支払額：整数値 * 10⁻⁸ MONA
+  手数料：データ1KBあたりで算出する係数。Mpurseでは初期値101。10〜200
+Examples:
+  ${THIS_NAME}
+  ${THIS_NAME} -h
+  ${THIS_NAME} -v
+  ${THIS_NAME} -q 11400000 -f 101
+エラー
+  支払額が低いと「Destination output is dust」エラーになる。
+  55000以上ならOKだった。0.00055000 MONA（2022-10-01時点）
